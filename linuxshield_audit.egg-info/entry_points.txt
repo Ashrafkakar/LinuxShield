@@ -1,0 +1,2 @@
+[console_scripts]
+linuxshield = linuxshield.cli:main

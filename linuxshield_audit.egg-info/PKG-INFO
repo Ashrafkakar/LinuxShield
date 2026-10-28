@@ -1,0 +1,91 @@
+Metadata-Version: 2.4
+Name: linuxshield-audit
+Version: 0.1.0
+Summary: A safe, read-only Linux security auditing starter tool
+Author: LinuxShield Contributors
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# LinuxShield
+
+**LinuxShield** is an open-source, read-only Linux security auditing starter project. It checks a few common configuration areas and produces terminal, JSON, and HTML output.
+
+> This is an educational MVP, not a replacement for a professional security audit. Its checks are heuristic and intentionally limited.
+
+## Features
+
+- Basic host/platform information
+- A simple review of common SSH server settings
+- UFW or firewalld status checks when available
+- Metadata checks for `/etc/shadow` and `/etc/sudoers`
+- Heuristic score and remediation suggestions
+- JSON and HTML reports
+- No automatic remediation and no intentional network probing
+
+## Requirements
+
+- Python 3.10+
+- Linux recommended; some checks will be unavailable on other operating systems
+- No third-party Python packages required for the MVP
+
+## Install from a cloned repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/LinuxShield.git
+cd LinuxShield
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+```
+
+Replace `YOUR-USERNAME` with your GitHub username after creating the repository.
+
+## Run
+
+```bash
+linuxshield
+linuxshield --json report.json
+linuxshield --html report.html
+```
+
+If you do not install the package, you can run it from the repository root:
+
+```bash
+python -m linuxshield.cli
+python -m linuxshield.cli --json report.json --html report.html
+```
+
+## Tests
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## Safety and limitations
+
+- Run only on systems you own or are authorized to assess.
+- The tool does not need root for its normal operation; some metadata may be unavailable to an unprivileged user.
+- The SSH check reads the main `/etc/ssh/sshd_config` only. It does not resolve `Include` files, `Match` blocks, or all effective settings.
+- Finding a firewall command is not proof that every firewall layer is active or correctly configured.
+- The score is a simple heuristic, not a certified security rating.
+- The tool does not change system configuration. Review recommendations manually before making changes.
+
+## Roadmap
+
+- [ ] More distribution-aware checks
+- [ ] Listening-socket inventory with clear scope and limitations
+- [ ] Scan comparison
+- [ ] Improved tests and CI
+- [ ] Optional web dashboard
+- [ ] Optional AI explanations with explicit user-provided API key
+
+## Contributing
+
+Issues and pull requests are welcome. Please include tests for new checks and avoid destructive or unauthorized behavior.
+
+## License
+
+MIT
