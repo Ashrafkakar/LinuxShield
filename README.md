@@ -7,7 +7,7 @@ LinuxShield is an open-source, read-only Linux security auditing tool built with
 Designed for Linux learners, cybersecurity students, and system administrators, LinuxShield offers a simple terminal interface for performing basic security checks.
 
 > **Disclaimer:** LinuxShield is an educational MVP. Its checks and security score are heuristic and do not replace a professional security audit.
-
+![LinuxShield Banner](linuxshield-banner.png)
 ## ✨ Features
 
 - 🔍 **Security Scanning** — Inspect selected Linux security settings.
