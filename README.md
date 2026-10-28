@@ -7,6 +7,7 @@ LinuxShield is an open-source, read-only Linux security auditing tool built with
 Designed for Linux learners, cybersecurity students, and system administrators, LinuxShield offers a simple terminal interface for performing basic security checks.
 
 > **Disclaimer:** LinuxShield is an educational MVP. Its checks and security score are heuristic and do not replace a professional security audit.
+
 ![LinuxShield Banner](linuxshield-banner.png)
 ## ✨ Features
 
@@ -48,10 +49,10 @@ The latest scan is saved locally so you can review its findings later. Report an
 
 ### 1. Clone the repository
 
-Replace `YOUR-USERNAME` with your GitHub username.
+Replace `Ashrafkakar` with your GitHub username.
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/LinuxShield.git
+git clone https://github.com/Ashrafkakar/LinuxShield.git
 cd LinuxShield
 ```
 
@@ -153,7 +154,7 @@ LinuxShield is distributed under the **MIT License**. See the [`LICENSE`](LICENS
 
 ## 👨‍💻 Author
 
-**Kakar**
+**Ashraf Kakar**
 
 Created as an educational cybersecurity project to explore Linux security auditing, Python development, and defensive security practices.
 
